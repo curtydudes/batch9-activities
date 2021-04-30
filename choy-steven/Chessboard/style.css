@@ -1,0 +1,29 @@
+.light {
+  background-color: #E6BF83;
+  height: 12.5%;
+  width: 12.5%;
+  font-size: 5vw;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dark {
+  background-color: #5A3300;
+  height: 12.5%;
+  width: 12.5%;
+  font-size: 5vw;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.chessboard {
+  width: 60vw;
+  height: 60vw;
+  margin: 0 auto;
+  border: 2vw solid black;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=style.css.map */

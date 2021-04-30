@@ -1,0 +1,178 @@
+<html>
+    <div id="outside">
+    <head>
+        <h1 id="title">Dunkin Donuts Survey</h1>
+        <p id="description">This survey is to analyze and understand <br>
+        the market perspective on their preference <br>
+        when buying from Dunkin Donuts. 
+    </p>
+    <link rel="stylesheet" href="C:\Users\curtc\batch9-activities\choy-steven\Survey-Form\style.css">
+    </head>
+    <body>
+        <form id="survey-form" action="result.html" method="GET">
+        <fieldset>
+            <legend>Personal Details</legend>
+        <div class="dunkin-form">
+           <label id="name-label" for="name">Name:
+                <input 
+                type="text" 
+                name="name" 
+                placeholder="Michael V"
+                size="20" 
+                required>
+            </label> 
+        </div>
+            <br>
+        <div class="dunkin-form">
+            <label id="email-label" for="email">Enter your gmail.com email:
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="chocobutternut@gmail.com"
+                pattern= ".+@gmail.com" 
+                size="30" 
+                required>
+            </label>
+        </div>
+            <br>
+        <div class="dunkin-form">
+            <label id="number-label" for="number">Age:
+                <input 
+                type="number" 
+                name="age" 
+                id="number" 
+                min="16" 
+                max="99"
+                step="3"
+                placeholder="must be 16 and above"
+                >
+                <!-- use CSS to adjust the width of age-->
+            </label>
+        </div>
+    </fieldset>
+            <br>
+            <!-- DD Survey Form Start -->
+            
+    <fieldset>
+        <legend>Survey Questions Part 1</legend>
+        <div class="dunkin-form">
+            <!-- DropDown with Satisfaction -->
+            <label for="donut-fave">Favorite Dunkin Donut Variant:
+                <select name="donutfave" id="donutfave">
+                    <option value="glazed">Glazed</option>
+                    <option value="glazed-chocolate">Glazed Chocolate</option>
+                    <option value="bavarian-kreme">Bavarian Kreme</option>
+                    <option value="boston-kreme">Boston Kreme</option>
+                    <option value="butternut">Butternut</option>
+                    <option value="choco-butternut" selected>Choco Butternut</option>
+                    <option value="jelly">Jelly</option>
+                    <option value="lemon">Lemon</option>
+                    <option value="cinnamon">Cinnamon</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="strawberry-frosted">Strawberry Frosted</option>
+                </select>
+            </label>
+        </div>
+            <br>
+        <div class="dunkin-form">
+            <label for="donut-satisfaction">How satisfied are you when buying your favorite donut?
+                <input type="range" 
+                size="2" 
+                name="satisfaction" 
+                class="slider"
+                min="1" 
+                max="10" 
+                value="5">
+                <!-- I can make a custom slider with a dunkin icon -->
+            </label>
+        </div>
+            <br>
+            <!-- Radio Buttons -->
+        <div class="dunkin-form">
+            <label for="size-question">What size do you buy your donut? 
+            <br>
+            <input type="radio" name="donut-size" id="normaldonut-size">
+            <label for="normal">Donut</label>
+            <br>
+            <input type="radio" name="donut-size" id="munchkindonut-size">
+            <label for="munchkin">Munchkin</label>
+            <br>
+        </div>
+    </fieldset>
+    <br>
+        <!-- DD Drink Survey -->
+    <fieldset>
+        <legend>Survey Questions Part 2</legend>
+        <div class="dunkin-form">
+            <label for="dr  ink-fave">Favorite Dunkin Drink Variant:
+                <select name="drink-fave" id="drink-fave">
+                    <optgroup label="Non-Espresso">
+                    <option value="brewed-coffee">Dunkin' Original Brewed Coffee</option>
+                    <option value="hot-chocolate">Hot Chocolate</option>
+                    <option value="iced-coffee">Iced Coffee</option>
+                    </optgroup> 
+                    <optgroup label="Icy Coolers">
+                    <option value="icy-orange">Icy Orange</option>
+                    <option value="icy-choco">Icy Choco</option>
+                    <option value="icy-tea" selected>Icy Tea</option>
+                    </optgroup>
+                    <optgroup label="Ice Blended Coffee">
+                    <option value="iced-coffee-float">Iced Coffee Float</option>
+                    <option value="macchiato-frio">Macchiato Frio</option>
+                    <option value="cafe-mocha-frio">Cafe Mocha Frio</option>
+                    <option value="rocky-road-frio">Rocky Road Frio</option>
+                    </optgroup>
+                </select>
+        </div>
+        <br>
+        <div class="dunkin-form">
+            <label for="text-why"> <p>Why do you choose this drink?</p>
+                <textarea 
+                name="text-why"
+                id="text-why"
+                rows="2"
+                cols="35"
+                placeholder="Enter Reason Here">
+                </textarea>
+        </div>
+        <div class="dunkin-form">
+            <p>Why do you choose Dunkin drinks over other stores?</p>
+            <input type="checkbox" 
+            name="reason1"
+            id="reason1"
+            value="taste">
+            <label for="reason1">The taste is better than other drinks</label><br>
+            <input type="checkbox" 
+            name="reason2"
+            id="reason2"
+            value="price">
+            <label for="reason2">The price is cheaper than other stores</label><br>
+            <input type="checkbox" 
+            name="reason3"
+            id="reason3"
+            value="convenient">
+            <label for="reason3">The branch is more accessible than other stores.</label><br>
+        </div>
+    </fieldset>
+    <br>
+    <fieldset>
+    <div class="dunkin-form">
+        <label for="additional-comments"> <p>Do you have any additional remarks?</p>
+            <textarea 
+            name="comments"
+            id="comments"
+            rows="5"
+            cols="50"
+            placeholder="Enter Remarks/Comments Here">
+            </textarea>
+    </div>
+    <br>
+    </fieldset>
+        <div id="submit">
+            <button type="submit" value="submit" id="submit-button">Submit</button>
+        </div>
+        </form>
+    </body>
+</div>
+</html>
