@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Daddy Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="aBigDeal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="LouisGeorgeCafe-Bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <header>
+        <!-- Nav Bar -->
+    <div id="header">
+        <div id="image">
+            <img id="header-img" src="assets/Smol Logo 7.png">
+        </div>
+        <div>
+            <nav id="nav-bar">
+            <a class="nav-link" href="#about-us-header">About us</a>
+            <a class="nav-link" href="#product-header">Products</a>
+            <a class="nav-link" href="#order-form">Order now</a>
+            </nav>
+        </div>
+    </header>
+        <!-- landing page -->
+<main class="landing-page"> 
+    <div class="left-side">
+        <p class="catch-phrase">Spend more time with your family by having Dinner Daddy at the ready. 
+        </p>
+        <br><br>
+        <a class="button" href="#order-form">Order now</a>
+    </div>
+    <!--slideshow-->
+    <div class="slider-holder">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+    <div class="dd-pictures">
+        <img id="family" src="assets/family.jpg" class="slider-image">
+        <img id="ihaw" src="assets/ihaw.jpg" class="slider-image">
+        <img id="lemonade" src="assets/lemonade.jpg" class="slider-image">
+    </div>
+    <!--buttons-->
+    <div class="button-holder">
+        <a href="#slider-image-1" class="slider-change"></a>
+        <a href="#slider-image-2" class="slider-change"></a>
+        <a href="#slider-image-3" class="slider-change"></a>
+    </div>
+    </div>
+</main>
+        <!-- about us section -->
+    <section class="about-us">
+        <div id="about-us-header">
+        <h1>About us</h1>
+        </div>
+        <div id="about-us-content"> 
+            <p>
+                Cooking for a family of six everyday can take the whole day in a kitchen
+                so Dinner Daddy started as an idea of shortening time in the kitchen while spending more with the family. 
+                It started with making pancake batter in advance to making ready to cook chickens to ready to heat lengua estofado 
+                and the more famous, lemon concentrate. 
+                <br><br>
+                Dinner Daddy aims to be the top brand for ready to cook and ready to heat food. Leading the industry for quality food
+                for quality time with family. If you haven't tried one of our dishes, just know that Daddy never disappoints. 
+            </p>
+            <br><br>
+            <div id="video-content">
+                <div>
+                    <h3>Why choose Dinner Daddy's lemon concentrate?</h3>
+                  </div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/TgLhmYgYL3I" 
+                  title="YouTube video player" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+
+            </div>
+        </div>
+
+    </section>
+        <!-- product grid -->
+    <section class="product">
+        <div id="product-header">
+            <h1>Products</h1>
+        </div>
+        <div id="product-content">
+            <div class="product" id="item1"></div>
+            <div class="product" id="item2"></div>
+            <div class="product" id="item3"></div>
+            <div class="product" id="item4"></div>
+        </div>
+    </section>
+        <!-- order form -->
+<form id="order-order-form" action="result.html" method="GET">
+    <section class="order-now">
+        <div id="order-form">
+            <h3>Order Form</h3>
+            <label for="fname" id="full-name">Full Name</label>
+            <input 
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Dinner Daddy"
+            size=20
+            required
+            >
+        </div>
+        <br>
+        <div class="order-form">
+            <label for="email" id="req-email">Email
+            <input 
+            type="email"
+            name="email"
+            id="email"
+            placeholder="DinnerDaddy@gmail.com"
+            pattern= ".+@gmail.com"
+            size=20 
+            required>
+        </label>
+        </div>
+        <br>
+        <div class="order-form">
+            <label for="address" id="address">Address</label>
+            <input 
+            type="address"
+            name="address"
+            placeholder="22 Gen. Malvar St. Malate, Manila"
+            size=30
+            >
+        </div>
+        <br>
+
+        <div class="order-form">
+            <label for="order">Your Order
+                <select name="order" id="order">
+                    <optgroup label="Ready to Heat">
+                    <option value="lengua-estofado">Lengua Estofado</option>
+                    <option value="beef-pares">Beef Pares</option>
+                    <option value="pork-salpicao">Pork Salpicao</option>
+                    </optgroup> 
+                    <optgroup label="Ready to Cook">
+                    <option value="lemon-herb-chicken">Lemon Herb Chicken</option>
+                    <option value="soy-chicken">Soy Chicken</option>
+                    <option value="marinated-bangus" selected>Marinated Bangus</option>
+                    </optgroup>
+                    <optgroup label="Concentrated Drinks">
+                    <option value="lemon-concentrate">Lemon Concentrate</option>
+                    <option value="orange-concentrate">Orange Concentrate</option>
+                    </optgroup>
+                </select>
+        </div>
+        <br>
+        <div class="order-form">
+            <label for="how-many" id="how-many">How Many?</label>
+            <input 
+            type="text"
+            name="how-many"
+            placeholder="2"
+            size=10
+            >
+        </div>
+        <br>
+        <input type="submit" value="Submit Order" class="submit-order">
+    
+    </section>
+</form>
+</body>
+</html>
