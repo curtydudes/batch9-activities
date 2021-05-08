@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "a Big Deal";
+  src: url("aBigDeal.woff2") format("woff2"), url("aBigDeal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url("LouisGeorgeCafe-Bold.woff2") format("woff2"), url("LouisGeorgeCafe-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: #009EDB;
+  font-family: "Louis George Cafe";
+}
+
+/* for nav bar */
+#header {
+  overflow: hidden;
+  background-color: #FDC930;
+  padding: 20px 20px;
+  position: fixed;
+  width: 96%;
+  font-family: "a Big Deal";
+}
+
+#header a {
+  padding: 10px;
+}
+
+#header a:hover {
+  background-color: brown;
+  color: white;
+}
+
+#nav-bar {
+  color: coral;
+  text-align: center;
+}
+
+#image > div {
+  display: flex;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #132640;
+}
+
+/* media query for nav bar */
+@media screen and (max-width: 600px) {
+  #header a:not(:first-child) {
+    display: none;
+  }
+}
+/* landing page */
+.landing-page {
+  display: grid;
+  grid-template-areas: "catch-phrase lemonade lemonade lemonade lemonade";
+  grid-gap: 0px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  align-items: center;
+  background-image: linear-gradient(to right, #F15C22, #FDC930);
+}
+
+.left-side {
+  grid-area: catch-phrase;
+  text-align: center;
+}
+.left-side .catch-phrase {
+  font-family: "Louis George Cafe";
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.button {
+  background-color: #E8C3A9;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+}
+
+/*slideshow*/
+.slider-holder {
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dd-pictures {
+  width: 2400px;
+  height: 400px;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+}
+
+.slider-image {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+#slider-image-1:target ~ .dd-pictures {
+  left: 0px;
+}
+
+#slider-image-2:target ~ .dd-pictures {
+  left: -500px;
+}
+
+#slider-image-3:target ~ .dd-pictures {
+  left: -900px;
+}
+
+.button-holder {
+  position: relative;
+  top: -20px;
+}
+
+.slider-change {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: #FDC930;
+}
+
+/* */
+#lemonade {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.lemonade-pictures {
+  grid-area: lemonade;
+  text-align: center;
+}
+
+/* about us */
+#about-us-header {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#about-us-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  background-color: white;
+}
+#about-us-content #video-content {
+  text-align: center;
+}
+
+/* product grid */
+#product-header {
+  text-align: center;
+}
+
+#product-content {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+}
+#product-content .product {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+}
+#product-content #item1 {
+  background-image: url("assets/lengua.png");
+  background-repeat: none;
+  background-size: cover;
+  background-position: bottom;
+}
+#product-content #item2 {
+  background-image: url("assets/lemon concentrate.png");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+}
+#product-content #item3 {
+  background-image: url("assets/chicken.png");
+  background-repeat: none;
+  background-size: cover;
+  background-position: bottom;
+}
+#product-content #item4 {
+  background-image: url("assets/pares.png");
+  background-repeat: none;
+  background-size: cover;
+  background-position: bottom;
+}
+
+/* order form */
+.order-now {
+  width: 40%;
+  background-color: orange;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.submit-order {
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
