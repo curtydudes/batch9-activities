@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" defer></script>
+    <script src="quotes.js" defer></script>
+    <script src="todo.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Premature Election</title>
+</head>
+<body>
+<!-- landing page -->
+    <section>
+        <div id="title-container">
+            <div id="title">
+                <h2>Premature Election</h2>
+                <h3>Campaign Website</h3>
+            </div>
+            <br>
+        </div>
+    </section>
+    <!-- Greeting with name, current date-->
+    <br>
+    <section id="right">
+        <div class="time-date-display">
+            <span class="spiel">As of </span>
+            <span id="month"></span>
+            <span id="day"></span>, 
+            <span id="year"></span>
+            <span id="time"></span>
+            <span class="spiel">, I am alive and kicking!</span>
+        </div>
+        <br>
+        <!-- <div id="greeting-container"> -->
+            <!-- <form class="container">
+                <input 
+                class="name"
+                type="text"
+                id="name"
+                placeholder="Your name here"
+                >
+                <input 
+                type="submit"
+                id="submit"
+                value="Submit Name"
+                >
+            </form> -->
+        <div class="name-container">
+            <span id="greeting"></span>
+            <input id="name" size="10"></input>! <br> <br> 
+            <span>Gusto ko immortal ka.</span>
+
+        </div>
+        <!-- </div> -->
+
+
+            <!-- main focus-->
+        <div class="focus-container">
+            <form class="container">
+                <input 
+                class="focus"
+                type="text"
+                id="focus"
+                size="40"
+                placeholder="What is your main focus today?"
+                >
+                <br>
+                <input 
+                type="submit"
+                id="submit-focus"
+                value="Submit Main Focus"
+                >
+            <div class="focus-output-container"></div>
+        </div>
+
+            <!--to do list and quotes-->
+        <div class="to-dos-and-quotes">
+            <div class="container">
+                <label id="label-to-do">Immortality is yours, <br>
+                    just help me win this 2022 by: </label>
+                <br><br>
+                    <input
+                    type="text"
+                    id="add-to-do"
+                    class="add-to-do"
+                    placeholder="Add To-Do Here"
+                    >
+                    <button id="add-to-do-button">Add</button>
+                <div class="to-dos" >
+                    <li id="to-do-container"></li>
+                </div>
+            </div>
+        <br>
+        <br>
+            <!-- quote of the campaign, adding quotes-->
+            <div class="quotes-container">
+
+                <div id="new-quotes-container">
+                <label id="quotes-label">Slogan Quotes</label>
+                <br> <br> 
+                    <input
+                    type="text"
+                    id="add-quotes"
+                    class="add-quotes"
+                    name="add-quotes"
+                    placeholder="Add Quotes Here"
+                    >
+                <button type="submit" id="add-quote-button">Add</button>
+                </div>
+                <br>
+                <div class="quote-text">
+                    <li id="quote-list">
+                        
+                    </li>
+                </div>
+                <br>
+                <div id="quote-generator">
+                    <button id="generate">Quote for today's Campaign</button>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- footer--hosted by-->
+    <!-- <div class="footer">
+        <p>Paid by the friends of Enrile</p>
+    </div> -->
+
+</body>
+</html>

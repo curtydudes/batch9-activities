@@ -1,0 +1,288 @@
+@font-face {
+    font-family: thickFont;
+    src: url(aBigDeal.woff);
+}
+@font-face {
+    font-family: cafeFont;
+    src: url(LouisGeorgeCafe-Bold.woff);
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-image: linear-gradient(90deg, transparent, rgba(51,51,51,0.3), rgba(51,51,51,0.8)),
+    url(/assets/JuanPonceBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    section {
+        width: 50vw;
+        height: 100vh;
+        margin: 0; 
+        padding: 2vh 1vw; 
+
+        /* landing page */
+        #title-container {
+            font-family: thickFont;
+            letter-spacing: .5rem;
+            font-size: 20px;
+            color: white;
+
+
+            h2 {
+                font-size: 40px
+            }
+
+            h3 {
+                font-weight: 100;
+                
+            }
+        }
+    }
+
+    #right {
+        display:flex;
+        flex-direction: column;
+        font-family: cafeFont;
+
+        /* greeting and current date */
+
+        .time-date-display {
+            width: 100%;
+            height: 10%;
+
+            font-size: 20px;
+            color: white;   
+            text-align: center;
+
+                #month {
+                    font-style: italic;
+                }
+                #day {
+                    font-style: italic;
+                }
+                #year {
+                    font-style: italic;
+                }
+                #time {
+                    font-style: oblique;
+                }
+            }
+        .name-container {
+            width: 100%;
+            height: 10%;
+        
+            font-size: 20px;
+            color: white;
+            text-align: center;
+
+                #name {
+                    padding: 2px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid white;
+                    color: white;
+                    font-size: 20px;
+                    text-align: center;
+                }
+        }
+
+        .focus-container {
+            width: 100%;
+            height: 20%;
+            margin: auto; 
+            padding: 20px;
+            text-align: center;
+
+                .container {
+                    margin: 0 auto;
+                    padding-top: 50px;
+
+                    #focus {
+                        padding: 12px;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 2px solid white;
+                        color: white;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+
+                    #submit-focus {
+                        background-color: gray;
+                        border: none;
+                        color: white;
+                        padding: 15px 30px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 10px;
+                        cursor: pointer;
+                        border-radius: 10px;
+                    }
+                }
+
+                .focus-output-container {
+                    font-size: 40px;
+                    color: white;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+        }
+         /* quotes and to-dos */
+        .to-dos li {
+            list-style: none;
+        }
+        
+        .quote-text li {
+            list-style: none;
+            text-align: center;
+        }
+       
+        .to-dos-and-quotes {
+            display:flex;
+            justify-content: space-evenly;
+            height: 50%;
+            align-content:center;
+        
+                #label-to-do {
+                    font-size: 20px;
+                    color: white;
+                
+                }
+
+                #add-to-do {
+                    background-color: #A0A8B2;
+                    border: none;
+                    border-bottom: 2px solid white;
+                    color: white;
+                    font-size: 20px;
+                    text-align: center;
+                }
+        
+                #to-do-container {
+                    font-size:20px;
+                    color:white;
+                }
+        
+                .quotes-container {
+                    font-size:20px;
+                    color: white;
+
+                    #add-quotes {
+                        background-color: #A0A8B2;
+                        border: none;
+                        border-bottom: 2px solid white;
+                        color: white;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+
+                    #generate {
+                        background-color: gray;
+                        border: none;
+                        color: white;
+                        padding: 15px 30px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        margin: 10px;
+                        cursor: pointer;
+                        border-radius: 10px;
+                    }
+                }
+        }
+        
+    }
+}
+
+::placeholder {
+    color: #F8FBFD;
+    }
+// /* images */
+// // #enrile {
+// //     grid-column-start:1 ;
+// //     grid-column-end:2 ;
+// //     grid-row-start:2 ;
+// //     grid-row-end:5 ;
+// //     background-image: url(/assets/Enrile.jpg);
+// //     background-repeat: no-repeat;
+// // }
+
+// // #banner {
+// //     grid-column-start:2 ;
+// //     grid-column-end:4 ;
+// //     grid-row-start:1 ;
+// //     grid-row-end:3 ;
+// //     background-image: url(/assets/banner.jpg);
+// //     background-size: cover;
+// //     background-repeat: no-repeat;
+// //     background-position: relative;
+// //     z-index: -1;
+// //     opacity: .7;
+// // }
+
+
+
+
+  
+
+// #greeting-container {
+//     grid-column-start:3 ;
+//     grid-column-end:4 ;
+//     grid-row-start:3 ;
+//     grid-row-end:4 ;
+//     padding-top: 20px;
+//     margin: 0 auto;
+    
+
+       
+// }
+
+
+// /* main focus and to do list */
+
+
+// /* footer */
+
+// .footer {
+//     grid-column-start:1 ;
+//     grid-column-end:4 ;
+//     grid-row-start:5 ;
+//     grid-row-end:6 ;
+// }
+
+
+// Hide/Show Contents
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.hide {
+    visibility: hidden;
+    height: 0;
+    -webkit-animation: fadeIn 1.3s;
+    animation: fadeIn 1.3s;
+}
+
+.none {
+    display: none;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
