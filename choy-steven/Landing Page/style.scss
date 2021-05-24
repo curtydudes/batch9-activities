@@ -75,7 +75,11 @@ a:link, a:visited {
     background-image: linear-gradient(to right, #F15C22, #FDC930 );
    
 }
-
+@media screen and (max-width: 800px) {
+    .landing-page {
+      width: 40%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
 .left-side {
     grid-area: catch-phrase;
     text-align: center;
@@ -251,6 +255,11 @@ a:link, a:visited {
     text-align: center;
 }
 
+@media screen and (max-width: 400px) {
+    .order-now {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
 .submit-order {
     align-items: center;
     align-content:center;
