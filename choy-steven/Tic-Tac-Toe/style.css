@@ -1,0 +1,14 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --cell-size: 100px;
+  --mark-size: 100px;
+}
+
+body {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
