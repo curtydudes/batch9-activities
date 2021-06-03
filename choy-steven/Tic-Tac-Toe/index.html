@@ -9,20 +9,43 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
-<div class="board" id="board">
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-    <div class="cell" data-cell></div>
-</div>
-<div class="winning-message" id="winningMessage">
-    <div data-winning-message-text>X wins!</div>
-        <button id="restartButton">Restart</button>
-</div>
+    <main class="background">
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <section class="display">
+            Player <span class="display-player playerX">X</span>'s turn
+        </section>
+        <section class="container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </section>
+        <!-- manipulate via JS -->
+        <section class="display announcer hide"></section>
+        <section class="controls hide">
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+            <button id="reset">Reset</button>
+        </section>
+        <!-- modal for history and reset button -->
+        <div class="modal-bg">
+            <div class="modal">
+                <h2 id="modal-header"></h2>
+                <span id="modal-text"></span>
+                <div class="modal-btn">
+                    <button id="newBtn">NEW GAME</button>
+                    <button id="historyBtn">SHOW GAME HISTORY</button>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
+

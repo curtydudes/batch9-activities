@@ -1,39 +1,49 @@
-*, *::after, *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-:root {
-  --cell-size: 100px;
-  --mark-size: calc(var(--cell-size) * .9);
-}
-
-body {
+* {
+  padding: 0;
   margin: 0;
+  font-family: 'Lucida Console', sans-serif;
 }
 
-.board {
-  width: 100vw;
+.background {
+  background-color: #12181B;
   height: 100vh;
+  padding-top: 1px;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10%;
+}
+
+.display {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  -ms-grid-rows: 33% 33% 33%;
+      grid-template-rows: 33% 33% 33%;
+  max-width: 300px;
 }
 
-.cell {
-  width: var(--cell-size);
-  height: var(--cell-size);
-  border: 1px solid black;
+.tile {
+  border: 1px solid white;
+  min-width: 100px;
+  min-height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,132 +53,120 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  font-size: 50px;
   cursor: pointer;
 }
 
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3) {
-  border-top: none;
+.playerX {
+  color: blue;
 }
 
-.cell:nth-child(3n+1) {
-  border-left: none;
+.playerO {
+  color: red;
 }
 
-.cell:nth-child(3n+3) {
-  border-right: none;
-}
-
-.cell:last-child,
-.cell:nth-child(7),
-.cell:nth-child(8) {
-  border-bottom: none;
-}
-
-.cell.x,
-.cell.circle {
-  cursor: not-allowed;
-}
-
-.cell.x::before,
-.cell.x::after,
-.cell.circle::before,
-.cell.circle::after {
-  background-color: black;
-}
-
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after,
-.board.circle .cell:not(.x):not(.circle):hover::before,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-  background-color: lightgray;
-}
-
-.cell.x::before,
-.cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after {
-  content: "";
-  position: absolute;
-  width: calc(var(--mark-size) * .15);
-  height: var(--mark-size);
-}
-
-.cell.x::before,
-.board.x .cell:not(.x):not(.circle):hover::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.cell.circle::before,
-.cell.circle::after,
-.board.circle .cell:not(.x):not(.circle):hover::before,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-
-.cell.circle::before,
-.board.circle .cell:not(.x):not(.circle):hover::before {
-  width: var(--mark-size);
-  height: var(--mark-size);
-}
-
-.cell.circle::after,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-  width: calc(var(--mark-size) * .7);
-  height: calc(var(--mark-size) * .7);
-  background-color: white;
-}
-
-.winning-message {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  font-size: 5rem;
-  -webkit-box-orient: vertical;
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
 }
 
-.winning-message button {
-  font-size: 3rem;
-  background-color: white;
-  border: 1px solid black;
-  padding: .25em .5em;
+.controls button {
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  margin-left: 1em;
   cursor: pointer;
 }
 
-.winning-message button:hover {
-  background-color: black;
-  color: white;
-  border-color: white;
+#previous {
+  display: block;
+  visibility: hidden;
+  color: violet;
 }
 
-.winning-message.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#next {
+  display: block;
+  visibility: hidden;
+  color: violet;
+}
+
+.restart {
+  background-color: #498AFB;
+}
+
+#reset {
+  background-color: #FF3860;
+}
+
+/* MODAL */
+.modal-bg {
+  position: fixed;
+  float: left;
+  left: 50%;
+  right: 50%;
+  bottom: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal {
+  letter-spacing: 4px;
+  background-color: #ffffff;
+  border-radius: 0.8em;
+  padding: 2em 0;
+  color: var(--black);
+  line-height: 60px;
+}
+
+#modal-header,
+#modal-text {
+  font-size: 7vmin;
+  font-weight: 700;
+}
+
+#modal-header {
+  color: var(--yellow);
+}
+
+.modal-btn {
+  margin-top: 1.5em;
+}
+
+.modal-btn button {
+  width: 16em;
+  padding: 1em 0;
+}
+
+#historyBtn {
+  background-color: var(--blue);
+}
+
+#resetBtn,
+#newBtn {
+  background-color: var(--rose);
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

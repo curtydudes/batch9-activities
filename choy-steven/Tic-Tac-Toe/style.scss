@@ -1,156 +1,142 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-}
-
-:root {
-    --cell-size: 100px;
-    --mark-size: calc(var(--cell-size) * .9);
-}
-
-body {
+* {
+    padding: 0;
     margin: 0;
+    font-family: 'Lucida Console', sans-serif;
+}
+// color of the background
+.background {
+    background-color: #12181B;
+    height: 100vh;
+    padding-top: 1px;
+}
+//beautify the page
+.title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
 }
 
-.board {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(3, auto);
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
-.cell {
-    width: var(--cell-size);
-    height: var(--cell-size);
-    border: 1px solid black;
+// hide any UI elements of the page 
+.hide {
+    display: none;
+}
+// create a grid system for TTC board
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+
+}
+//set border and size for the tile
+.tile {
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    font-size: 50px;
     cursor: pointer;
 }
-
-//taking out borders on the sides
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3) {
-    border-top: none;
+//will be used to color the X
+.playerX {
+    color: blue;
 }
 
-.cell:nth-child(3n+1) {
-    border-left: none;
+.playerO {
+    color: red;
 }
-
-.cell:nth-child(3n+3) {
-    border-right: none;
-}
-
-.cell:last-child,
-.cell:nth-child(7),
-.cell:nth-child(8) {
-    border-bottom: none;
-}
-
-
-.cell.x,
-.cell.circle
- {
-    cursor: not-allowed;
-}
-
-//hovering the x and o with different color
-
-.cell.x::before,
-.cell.x::after,
-.cell.circle::before,
-.cell.circle::after {
-    background-color: black;
-}
-
-
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after,
-.board.circle .cell:not(.x):not(.circle):hover::before,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-    background-color: lightgray;
-}
-
-//only for x
-.cell.x::before,
-.cell.x::after, 
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after {
-    content: "";
-    position: absolute;
-    width: calc(var(--mark-size) * .15);
-    height: var(--mark-size);
-}
-
-//making lines into an x
-.cell.x::before,
-.board.x .cell:not(.x):not(.circle):hover::before {
-    transform: rotate(45deg);
-}
-
-.cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::after {
-    transform: rotate(-45deg);
-}
-
-//making a circle
-.cell.circle::before,
-.cell.circle::after,
-.board.circle .cell:not(.x):not(.circle):hover::before,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-}
-
-.cell.circle::before,
-.board.circle .cell:not(.x):not(.circle):hover::before {
-    width: var(--mark-size);
-    height: var(--mark-size);
-}
-
-.cell.circle::after,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-    width: calc(var(--mark-size) * .7);
-    height: calc(var(--mark-size) * .7);
-    background-color: white;
-}
-
-.winning-message {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0, .9);
+//add spacing
+.controls {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 5rem;
-    flex-direction: column;
+    margin-top: 1em;
 }
 
-.winning-message button {
-    font-size: 3rem;
-    background-color: white;
-    border: 1px solid black;
-    padding: .25em .5em;
+.controls button {
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
     cursor: pointer;
 }
 
-.winning-message button:hover {
-    background-color: black;
-    color: white;
-    border-color: white
+#previous {
+    display: block;
+    visibility: hidden;
+    color: violet;
 }
 
-.winning-message.show {
-    display: flex
+#next {
+    display: block;
+    visibility: hidden;
+    color: violet;
+}
+
+.restart {
+    background-color: #498AFB;
+}
+
+#reset {
+    background-color: #FF3860;
+}
+
+/* MODAL */
+.modal-bg {
+    position: fixed;
+    float: left;
+    left: 50%;
+    right: 50%;
+    bottom: 25%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.modal {
+    letter-spacing: 4px;
+    background-color: #ffffff;
+    border-radius: 0.8em;
+    padding: 2em 0;
+    color: var(--black);
+    line-height: 60px;
+}
+#modal-header,
+#modal-text {
+    font-size: 7vmin;
+    font-weight: 700;
+}
+#modal-header {
+    color: var(--yellow);
+}
+.modal-btn {
+    margin-top: 1.5em;
+}
+.modal-btn button {
+    width: 16em;
+    padding: 1em 0;
+}
+#historyBtn {
+    background-color: var(--blue);
+}
+#resetBtn,
+#newBtn {
+    background-color: var(--rose);
+    color: black;
 }
