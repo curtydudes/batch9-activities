@@ -213,7 +213,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // resetButton
     resetButton.addEventListener('click', resetBoard);
     // modal button
-    newGameBtn.addEventListener('click', resetBoard);
+    newGameBtn.addEventListener("click", () => {
+        window.location.reload();
+        modalContainer.style.display = 'none';
+      });
 });
 
 previousBtn.style.visibility = 'hidden';
