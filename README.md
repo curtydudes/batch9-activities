@@ -39,3 +39,11 @@ run bundle install
   end
  ```
  ###### As you noticed, I created another subfolder in my controller folder hence the nesting of :rawgames in the routing. I wanted to experiment on the namespacing assuming that I created another subfolder. I wanted to see what changes will happen. I let the changes stay there so I will also have my own reference. 
+ 
+## Testing Errors
+###### If the test is successful, using Postmanm, this will be the outcome: 
+![image](https://user-images.githubusercontent.com/81552806/135698979-ff092ffa-9cb8-401f-9ea8-b9052a48fb4b.png)
+
+###### If the test is unsuccessful, I've created in the controllers, a response to errors. This is one of them: 
+![image](https://user-images.githubusercontent.com/81552806/135699315-16bb987d-b407-4bcb-926a-8b58d1af9167.png)
+
